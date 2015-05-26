@@ -1,0 +1,31 @@
+@import "./variables";
+
+@custom-media --iphone (width <= 640px);
+
+@custom-selector --heading h1, h2, h3, h4, h5, h6;
+
+.app --heading {
+  color: blueviolet;
+}
+
+.widget {
+  display: inline-block;
+  outline: 2px dotted #ff6576;
+  padding: 20px;
+  color: var(--mainColor);
+}
+.widget {
+  input {
+    transition: all 2s;
+
+    &:hover {
+      background-color: orange;
+    }
+  }
+}
+
+@media (--iphone) {
+  .widget {
+    display: block;
+  }
+}
